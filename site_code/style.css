@@ -37,8 +37,6 @@ a {
   z-index: 135;
   position: relative;
   margin-top: -260px;
-  position: relative;
-  z-index: 130;
 }
 
 .cta-4:hover {
@@ -95,7 +93,6 @@ a {
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
-  position: relative;
   z-index: 130;
 }
 
@@ -496,7 +493,7 @@ main {
   background-position: top;
   background-size: cover;
   width: 100%;
-  height: 650px;
+  height: 817px;
   top: -314px;
   left: 0px;
   z-index: -1;
@@ -566,7 +563,7 @@ main {
 }
 
 .connect-background-2 {
-  transform: translateZ(-15px) scale(2.5);
+  transform: translateZ(-10px) scale(2);
 }
 
 .connect {
@@ -585,7 +582,7 @@ main {
   background-position: top;
   background-size: cover;
   width: 100%;
-  height: 650px;
+  height: 820px;
   top: -314px;
   left: 0px;
   z-index: -1;
@@ -736,6 +733,7 @@ main {
 
   .intro::before {
     top: -250px;
+    height: 800px;
   }
 
   .intro .left-col {
@@ -868,6 +866,10 @@ main {
   .connect {
     margin-top: 1300px;
   }
+
+  .connect .card-container {
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -973,10 +975,6 @@ main {
     margin-top: 1200px;
   }
 
-  .connect .card-container {
-    flex-direction: column;
-  }
-
   .responsive-image1 {
     content: url("images/connectpage-bgtab.jpg");
   }
@@ -1068,6 +1066,15 @@ main {
     background-image: url("images/connectbgmobile.jpg");
     background-size: cover;
     background-position: left;
+  }
+
+  .connect .card-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .connect:before {
+    height: 950px;
   }
 }
 
@@ -1234,7 +1241,7 @@ main {
     margin-top: 972px;
   }
   .connect:before {
-    top: -225px;
+    top: -500px;
   }
 }
 
