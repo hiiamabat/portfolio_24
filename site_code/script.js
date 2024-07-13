@@ -1,20 +1,21 @@
 const navbarEl = document.querySelector(".navbar");
 
-window: addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    navbarEl.classList.add(".navbar-scrolled");
-  } else if (window.scrollY <= 50) {
-    navbarEl.classList.remove(".navbar-scrolled");
+    navbarEl.classList.add("navbar-scrolled");
+  } else {
+    navbarEl.classList.remove("navbar-scrolled");
   }
 });
 
-let emailText = document.querySelector("#email-text");
+const emailText = document.querySelector("#email-text");
+const copyEmailButton = document.querySelector(".copy-email");
 
-let handleCopyClick = document.querySelector(".copy-email");
-
-handleCopyClick.addEventListener("click", () => {
-  let text = emailText.textContent;
-  navigator.clipboard.writeText("hiiamabat@gmail.com");
-
-  alert(`email copied to clipboard`);
+copyEmailButton.addEventListener("click", () => {
+  const text = emailText.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Email copied to clipboard');
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
 });
