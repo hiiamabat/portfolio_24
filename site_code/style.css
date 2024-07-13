@@ -1090,7 +1090,7 @@ main {
   }
 
   .intro::before {
-    top: -170px;
+    top: -195px;
   }
 
   .two-col {
@@ -1193,6 +1193,10 @@ main {
 }
 
 @media only screen and (max-width: 520px) {
+  .intro:before {
+    top: -215px;
+  }
+
   /* ABOUT PAGE */
   .card-container {
     flex-direction: column;
@@ -1236,6 +1240,7 @@ main {
 @media only screen and (max-width: 400px) {
   .intro:before {
     height: 836px;
+    top: -215px;
   }
   .connect {
     margin-top: 972px;
